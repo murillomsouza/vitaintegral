@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+/*botao wpp*/
+.whatsapp-float img {
+    width: 28px;
+    height: 28px;
+
+    display: block;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    background-color: #25d366;
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    font-size: 1.5rem;
+
+    text-decoration: none;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+
+    z-index: 1000;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Micro interação */
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
+
+/* Variáveis */
+:root {
+    --cor-primaria: #2bb673;
+    --cor-secundaria: #1e7f54;
+    --cor-texto: #333;
+    --cor-fundo: #f9f9f9;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+/*header*/
+.hero {
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('../imgs/vitaintegral.png') center/cover no-repeat;
+    color: #fff;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    text-decoration: none;
+
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/*serviços*/
+.servicos h2 {
+    text-align: center;
+}
+
+.servicos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    margin: 2rem;
+}
+
+.servico {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servico:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.servico {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.servico h3 {
+    margin-bottom: 0.5rem;
+    color: var(--cor-primaria);
+}
+
+.servico-img img {
+    transition: transform 0.4s ease;
+}
+
+.servico:hover .servico-img img {
+    transform: scale(1.05);
+}
+
+.servico-img {
+    width: 100%;
+    height: 160px;
+
+    overflow: hidden;
+    border-radius: 6px;
+
+    margin-bottom: 1rem;
+}
+
+.servico-img img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .servicos-container {
+        flex-direction: row;
+    }
+
+    .servico {
+        flex: 1;
+    }
+
+    .servico-img {
+        height: 200px;
+    }
+}
+
+
+/*localização*/
+.localizacao {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.localizacao h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.localizacao p {
+    margin-bottom: 1.5rem;
+}
+
+/* Mapa responsivo */
+.mapa {
+    width: 100%;
+    height: 300px;
+
+    border-radius: 8px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/*contato*/
+.contato {
+    background-color: var(--cor-primaria);
+    color: #fff;
+
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+/* Container flex */
+.contato-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    margin-bottom: 2rem;
+}
+
+.contato-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-size: 1rem;
+}
+
+/* Botão dentro da seção verde */
+.contato .btn {
+    background-color: #fff;
+    color: var(--cor-primaria);
+}
+
+.contato .btn:hover {
+    background-color: #eaeaea;
+}
+
+@media (min-width: 768px) {
+    .contato-info {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .mapa {
+        height: 400px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}

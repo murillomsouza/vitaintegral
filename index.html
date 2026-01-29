@@ -16,19 +16,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="js/contador.js" rel="script">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 
 </head>
 
 <body>
     <a
-    href="https://wa.me/5519987603797"
+    href="https://wa.me/5511950557373"
     class="whatsapp-float"
     target="_blank"
     aria-label="Falar com a Clínica Mais Saúde no WhatsApp">
-    <img
-        src="imgs/wpp.png"
-        alt="WhatsApp"
-        loading="lazy">
+    <i class="bi bi-whatsapp"></i>
     </a>
 
 
@@ -40,44 +40,127 @@
     </header>
 
     <!-- Serviços -->
-    <section class="servicos">
-    <h2>Nossos Serviços</h2>
-    <p>Focados em oferecer melhor qualidade de vida, através de profissionais qualificados e experientes em transformar
-        consultas em um ambiente acolhedor, onde sua saude e bem estar é nossa maior prioridade.
-    </p>
+    <section class="servicos" id="servicos">
+        <h2>Nossos Serviços</h2>
+        <p>Focados em oferecer melhor qualidade de vida, através de profissionais qualificados e experientes em transformar
+            consultas em um ambiente acolhedor, onde sua saude e bem estar é nossa maior prioridade.
+        </p>
 
-    <div class="servicos-container">
-        <div class="servico">
-            <div class="servico-img">
-                <img src="imgs/nutricionist.png" 
-                alt="Nutricionista - Indaiatuba" 
-                loading="lazy"> 
+        <div class="servicos-container">
+            <div class="servico">
+                <div class="servico-img">
+                    <img src="imgs/nutricionist.png" 
+                    alt="Nutricionista - Indaiatuba" 
+                    loading="lazy"> 
+                </div>
+                <h3>Nutrição</h3>
+                <p>Acompanhamento nutricional personalizado.</p>
             </div>
-            <h3>Nutrição</h3>
-            <p>Acompanhamento nutricional personalizado.</p>
-        </div>
 
-        <div class="servico">
-            <div class="servico-img">
-                <img src="imgs/consult.png" 
-                alt="Consulta com Medico de qualidade - Indaiatuba" l
-                oading="lazy">
+            <div class="servico">
+                <div class="servico-img">
+                    <img src="imgs/consult.png" 
+                    alt="Consulta com Medico de qualidade - Indaiatuba" l
+                    oading="lazy">
+                </div>
+                <h3>Atendimento Médico</h3>
+                <p>Profissionais qualificados para cuidar da sua saúde.</p>
             </div>
-            <h3>Atendimento Médico</h3>
-            <p>Profissionais qualificados para cuidar da sua saúde.</p>
-        </div>
 
-        <div class="servico">
-            <div class="servico-img">
-                <img src="imgs/personal.png" 
-                alt="Personal qualificado - Indaiatuba"
-                loading="lazy">
+            <div class="servico">
+                <div class="servico-img">
+                    <img src="imgs/personal.png" 
+                    alt="Personal qualificado - Indaiatuba"
+                    loading="lazy">
+                </div>
+                <h3>Personal Trainer</h3>
+                <p>Treinos personalizados para qualidade de vida.</p>
             </div>
-            <h3>Personal Trainer</h3>
-            <p>Treinos personalizados para qualidade de vida.</p>
         </div>
-    </div>
+        <div class="servicos-metricas">
+            <div class="metrica">
+                <strong data-contador="5000" data-prefix="+">0</strong>
+                <span>Pacientes Atendidos</span>
+            </div>
+
+            <div class="metrica">
+                <strong data-contador="10" data-prefix="+">0</strong>
+                <span>Especialidades</span>
+            </div>
+
+            <div class="metrica">
+                <strong data-contador="8" data-prefix="+">0</strong>
+                <span>Anos de Experiência</span>
+            </div>
+
+            <div class="metrica">
+                <strong data-contador="95" data-sufix="%">0</strong>
+                <span>Satisfação dos Pacientes (%)</span>
+            </div>
+        </div>
     </section>
+    <section class="depoimentos">
+        <h2>O que nossos pacientes dizem</h2>
+
+        <div class="carousel">
+            <button class="carousel-btn prev" aria-label="Depoimento anterior">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+
+            <div class="carousel-track">
+                <div class="depoimento active">
+                    <p>
+                        “Atendimento excelente! Profissionais muito atenciosos e
+                        ambiente acolhedor.”
+                    </p>
+                    <strong>Maria S.</strong>
+                </div>
+
+                <div class="depoimento">
+                    <p>
+                        “Consegui melhorar minha qualidade de vida com o acompanhamento
+                        da equipe. Recomendo!”
+                    </p>
+                    <strong>João P.</strong>
+                </div>
+
+                <div class="depoimento">
+                    <p>
+                        “Equipe extremamente qualificada. Me senti seguro desde a
+                        primeira consulta.”
+                    </p>
+                    <strong>Ana C.</strong>
+                </div>
+                <div class="depoimento">
+                    <p>
+                        “Fui muito bem atendida desde a primeira consulta. 
+                        A equipe é atenciosa, explica tudo com clareza e o acompanhamento 
+                        fez toda a diferença no meu tratamento.”
+                    </p>
+                    <strong>Elizangela P.</strong>
+                </div>
+                <div class="depoimento">
+                    <p>
+                        “Procurei a clínica por indicação e não me arrependo. 
+                        Profissionais qualificados e um atendimento humanizado. Hoje me sinto muito melhor.”
+                    </p>
+                    <strong>Lincon J.</strong>
+                </div>
+                <div class="depoimento">
+                    <p>
+                        “Ambiente organizado, atendimento pontual e profissionais que realmente se 
+                        preocupam com o paciente. Recomendo sem dúvidas.”
+                    </p>
+                    <strong>José L.</strong>
+                </div>
+            </div>
+
+            <button class="carousel-btn next" aria-label="Próximo depoimento">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
 
     <!-- Localização-->
     <section class="localizacao">
@@ -105,7 +188,7 @@
 
             <div class="footer-actions">
                 <a href="#servicos" class="footer-btn">Serviços</a>
-                <a href="#contato" class="footer-btn footer-btn-outline">Contato</a>
+                <a href="https://wa.me/5511950557373" class="footer-btn footer-btn-outline">Contato</a>
             </div>
         </div>
 
@@ -121,12 +204,13 @@
             </p>
 
             <div class="footer-social">
-                <a href="#" aria-label="Facebook">f</a>
-                <a href="#" aria-label="Instagram">i</a>
-                <a href="#" aria-label="LinkedIn">in</a>
+                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
             </div>
         </div>
     </footer>
-
+    <script src="js/contador.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>

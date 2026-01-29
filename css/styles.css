@@ -6,10 +6,14 @@
 
 html{
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
     font-family: 'Inter', Arial, sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 section {
@@ -139,7 +143,8 @@ body {
     flex-direction: column;
     gap: 1.5rem;
     text-align: center;
-    margin: 2rem;
+    padding: 0 1rem;
+    margin-top: 2rem;
 }
 
 .servico {
@@ -212,6 +217,138 @@ body {
     }
 }
 
+.servicos-metricas {
+    margin-top: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    text-align: center;
+}
+
+.metrica strong {
+    display: block;
+    font-size: 2.2rem;
+    color: var(--cor-primaria);
+}
+
+.metrica span {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.metrica {
+    transition: transform 0.3s ease;
+}
+
+.metrica:hover {
+    transform: translateY(-4px);
+}
+
+@media (min-width: 768px) {
+    .servicos-metricas {
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+    }
+}
+
+.depoimentos {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.depoimentos h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+/* Carrossel */
+.carousel {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    overflow: hidden;
+}
+
+/* Depoimento */
+.depoimento {
+    display: none;
+
+    background-color: var(--cor-fundo);
+    padding: 1.5rem;
+    border-radius: 8px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.depoimento.active {
+    display: block;
+}
+
+.depoimento p {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.depoimento strong {
+    color: var(--cor-primaria);
+}
+
+/* Botões */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: none;
+    border: none;
+
+    font-size: 1.8rem;
+    color: var(--cor-primaria);
+
+    cursor: pointer;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.depoimento {
+    animation: fade 0.4s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel-btn.prev {
+        left: -40px;
+    }
+
+    .carousel-btn.next {
+        right: -40px;
+    }
+}
+
 
 /*localização*/
 .localizacao {
@@ -230,7 +367,7 @@ body {
 
 /* Mapa responsivo */
 .mapa {
-    width: 100%;
+    max-width: 100%;
     height: 300px;
 
     border-radius: 8px;
